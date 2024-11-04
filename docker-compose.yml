@@ -1,0 +1,54 @@
+version: '3.3'
+services:
+  pg_hist:
+    image: bitnami/postgres:14.13
+    environment:
+      - "POSTGRES_PASSWORD="
+      - "POSTGRES_USER="
+      - "POSTGRES_DB="
+    ports:
+      - "5436:5432"
+
+  pg_hist:
+    image: bitnami/postgres:14.13
+    environment:
+      - "POSTGRES_PASSWORD="
+      - "POSTGRES_USER="
+      - "POSTGRES_DB="
+    ports:
+      - "5436:5432"
+
+  pg_repo:
+    image: bitnami/postgres:14.13
+    environment:
+      - "POSTGRES_PASSWORD="
+      - "POSTGRES_USER="
+      - "POSTGRES_DB="
+    ports:
+      - "5435:5432"
+
+  pg_sgd:
+    image: bitnami/postgres:14.13
+    environment:
+      - "POSTGRES_PASSWORD="
+      - "POSTGRES_USER="
+      - "POSTGRES_DB="
+    ports:
+      - "5434:5432"
+
+  elasticsearch:
+    image: elasticsearch:8.15.1
+    ports:
+      - "9200:9200"
+
+  payara:
+    image: payara/server-full:5.2022.2-jdk11
+    environment:
+      - "ADMIN_USER=admin"
+      - "ADMIN_PASSWORD=admin"
+    ports:
+      - "8080:8080"
+      - "8181:8181"
+      - "4848:4848"
+      - "9009:9009"
+
